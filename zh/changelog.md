@@ -1,3 +1,41 @@
+## v5.4.3
+<div class="time">2023-07-18</div>
+
++ [Feature] [axisPointer] 添加`triggerEmphasis`选项来禁用强调。 [#18524](https://github.com/apache/echarts/issues/18524) ([juliepagano](https://github.com/juliepagano))
++ [Feature] [sankey] 支持用于强调状态的`trajectory`。[#17451](https://github.com/apache/echarts/issues/17451) ([ElayGelbart](https://github.com/ElayGelbart))
++ [Fix] [sankey] 修复sankey线条颜色的`'target'/'source'/'gradient'`属性在异常状态下不起作用。[#18834](https://github.com/apache/echarts/issues/18834) ([linghaoSu](https://github.com/linghaoSu))
++ [Fix] [sankey] 修复标签/边缘标签格式中`value`未定义的问题。[#18733](https://github.com/apache/echarts/issues/18733) ([plainheart](https://github.com/plainheart))
++ [Fix] [sunburst] 修复启用`labelLayout.hideOverlap`时，旭日标签可能会旋转的问题。[#18808](https://github.com/apache/echarts/issues/18808) ([linghaoSu](https://github.com/linghaoSu))
++ [Fix] [graph] 修复由于edgeLabel NPE导致图例无法覆盖图表的问题。[#18624](https://github.com/apache/echarts/issues/18624) ([plainheart](https://github.com/plainheart))
++ [Fix] [label] 修复`ellipsis`不起作用的问题。[#18525](https://github.com/apache/echarts/issues/18525) ([Ovilia](https://github.com/Ovilia))
++ [Fix] [state] 修复当项目被其他组件emphasize时，focus自身无效。Fix focus self doesn't work when item emphasis by other component. [#18511](https://github.com/apache/echarts/issues/18511) ([linghaoSu](https://github.com/linghaoSu))
++ [Fix] [axis] 修复单个数据最后一个刻度不显示的问题。[#18469](https://github.com/apache/echarts/issues/18469) ([Ovilia](https://github.com/Ovilia))
++ [Fix] [pie] 修正当`selectedOffset`启用且`animation`禁用时，饼图响应区域不正确的问题。[#1011](https://github.com/ecomfe/zrender/pull/1011) ([plainheart](https://github.com/plainheart))
++ [Fix] [custom] 修复用户自定义`info`属性在eventHandler中不可用的问题。[#18400](https://github.com/apache/echarts/issues/18400) ([sobolewsk](https://github.com/sobolewsk))
++ [Fix] [legend] 从图例选项继承图例富文本颜色。[#18260](https://github.com/apache/echarts/issues/18260) ([ChepteaCatalin](https://github.com/ChepteaCatalin))
++ [Fix] [util] 修复时间格式util中`{yy}`日期格式没有填充零的问题。[#18535](https://github.com/apache/echarts/issues/18535) ([linghaoSu](https://github.com/linghaoSu))
++ [Fix] [api] 只废弃`disConnect`而不废弃`disconnect`。[#18758](https://github.com/apache/echarts/issues/18758) ([Justineo](https://github.com/Justineo))
++ [Fix] [i18n] 修复德语中 "March "的短语（"Mar" -> "Mrz"）。 [#18387](https://github.com/apache/echarts/issues/18387) ([Stebeber](https://github.com/Stebeber))
++ [Fix] [type] 修复`parallel`场景中数据item值的错误类型。[#18425](https://github.com/apache/echarts/issues/18425) ([ManishDait](https://github.com/ManishDait))
++ [Fix] [type] 允许把`null`值传给init函数作为参数。[#18575](https://github.com/apache/echarts/issues/18575) ([zhuscat](https://github.com/zhuscat))
+
+## v5.4.2
+<div class="time">2023-03-23</div>
+
++ [Feature] [bar] 极坐标系柱状图柱条及其背景支持设置圆角。[#17995](https://github.com/apache/echarts/issues/17995) ([Ovilia](https://github.com/Ovilia))
++ [Feature] [i18n] 新增土耳其语翻译。[#18012](https://github.com/apache/echarts/issues/18012) ([partitect](https://github.com/partitect))
++ [Feature] [i18n] 新增越南语翻译。[#18279](https://github.com/apache/echarts/issues/18279) ([nghiepdev](https://github.com/nghiepdev))
++ [Fix] [bar] 极坐标系柱状图动画现在从 `r0` 开始，不再是从 `0` 开始。[#17997](https://github.com/apache/echarts/issues/17997) ([Ovilia](https://github.com/Ovilia))
++ [Fix] [marker] 修复柱状图 `markArea` 范围展示异常的问题。[#18229](https://github.com/apache/echarts/issues/18229) ([Ovilia](https://github.com/Ovilia))
++ [Fix] [line] 修复当启用服务端渲染时，折线图标签不显示的问题。[#18032](https://github.com/apache/echarts/issues/18032) ([plainheart](https://github.com/plainheart))
++ [Fix] [svg] 修复因 SVG 渲染器对 `style` 标签内容的错误编码导致定义的 CSS 样式不生效的问题。[#982](https://github.com/ecomfe/zrender/pull/982) ([plainheart](https://github.com/plainheart))
++ [Fix] [sunburst] 修复旭日图标签径向旋转时上下颠倒影响阅读的问题。[#18240](https://github.com/apache/echarts/issues/18240) ([susiwen8](https://github.com/susiwen8))
++ [Fix] [dataset] 修复数据集使用对象数组时，若数据对象含有 `length` 属性导致图表不能渲染的问题。[#18276](https://github.com/apache/echarts/issues/18276) ([susiwen8](https://github.com/susiwen8))
++ [Fix] [tooltip] 修复 `tooltip` 设置了 `alwaysShowContent` 鼠标移出后仍然消失的问题。[#18221](https://github.com/apache/echarts/issues/18221) ([jianghaoran116](https://github.com/jianghaoran116))
++ [Fix] [text] 修复部分西里尔文字符没有像拉丁文一样断词的问题。[#973](https://github.com/ecomfe/zrender/issues/973) ([Ovilia](https://github.com/Ovilia))
++ [Fix] [type] 旭日图 formatter 回调函数参数添加缺失的 `treePathInfo` 属性，`SunburstSeriesOption` 添加缺失的 `data` 配置项。[#18310](https://github.com/apache/echarts/issues/18310) ([plainheart](https://github.com/plainheart))
++ [Fix] [type] 树图 `symbol` 配置项添加缺失的回调函数类型。[#18070](https://github.com/apache/echarts/issues/18070) ([ChepteaCatalin](https://github.com/ChepteaCatalin))
+
 ## v5.4.1
 <div class="time">2022-12-09</div>
 
@@ -978,7 +1016,7 @@ Fix that the line label can not be returned to its original opacity after `"focu
 
 + [Fix] 修复了图例组件（legend）当空间只够显示一项时不能翻页的问题。参见 [#6743](https://github.com/apache/incubator-echarts/issues/6743)，[#8971](https://github.com/apache/incubator-echarts/issues/8971)，[#9471](https://github.com/apache/incubator-echarts/issues/9471)。
 
-+ [Fix] 修复了饼图标签（label）定位在中心时，在一些角度下有便宜的问题。参见 [#9657](https://github.com/apache/incubator-echarts/issues/9657)。
++ [Fix] 修复了饼图标签（label）定位在中心时，在一些角度下有偏移的问题。参见 [#9657](https://github.com/apache/incubator-echarts/issues/9657)。
 
 + [Fix] 修复了地图坐标系（geo）在 MS Edge 下不能拖动的问题。参见 [#9479](https://github.com/apache/incubator-echarts/issues/9479)。
 
@@ -1011,7 +1049,7 @@ Fix that the line label can not be returned to its original opacity after `"focu
 
 + [Fix] 修复了图例组件（legend）当空间只够显示一项时不能翻页的问题。参见 [#6743](https://github.com/apache/incubator-echarts/issues/6743)，[#8971](https://github.com/apache/incubator-echarts/issues/8971)，[#9471](https://github.com/apache/incubator-echarts/issues/9471)。
 
-+ [Fix] 修复了饼图标签（label）定位在中心时，在一些角度下有便宜的问题。参见 [#9657](https://github.com/apache/incubator-echarts/issues/9657)。
++ [Fix] 修复了饼图标签（label）定位在中心时，在一些角度下有偏移的问题。参见 [#9657](https://github.com/apache/incubator-echarts/issues/9657)。
 
 + [Fix] 修复了地图坐标系（geo）在 MS Edge 下不能拖动的问题。参见 [#9479](https://github.com/apache/incubator-echarts/issues/9479)。
 

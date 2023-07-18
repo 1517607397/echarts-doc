@@ -1,3 +1,41 @@
+## v5.4.3
+<div class="time">2023-07-18</div>
+
++ [Feature] [axisPointer] Add `triggerEmphasis` option to disable emphasis. [#18524](https://github.com/apache/echarts/issues/18524) ([juliepagano](https://github.com/juliepagano))
++ [Feature] [sankey] Support `trajectory` for emphasis state. [#17451](https://github.com/apache/echarts/issues/17451) ([ElayGelbart](https://github.com/ElayGelbart))
++ [Fix] [sankey] Fix sankey line color `'target'/'source'/'gradient'` doesn't work in non-normal state. [#18834](https://github.com/apache/echarts/issues/18834) ([linghaoSu](https://github.com/linghaoSu))
++ [Fix] [sankey] Fix `value` is undefined in label/edgeLabel formatter. [#18733](https://github.com/apache/echarts/issues/18733) ([plainheart](https://github.com/plainheart))
++ [Fix] [sunburst] Fix sunburst label may rotate when `labelLayout.hideOverlap` is enabled. [#18808](https://github.com/apache/echarts/issues/18808) ([linghaoSu](https://github.com/linghaoSu))
++ [Fix] [graph] Fix graph chart can't be hidden by legend due to edgeLabel NPE. [#18624](https://github.com/apache/echarts/issues/18624) ([plainheart](https://github.com/plainheart))
++ [Fix] [label] Fix `ellipsis` was not working. [#18525](https://github.com/apache/echarts/issues/18525) ([Ovilia](https://github.com/Ovilia))
++ [Fix] [state] Fix focus self doesn't work when item emphasis by other component. [#18511](https://github.com/apache/echarts/issues/18511) ([linghaoSu](https://github.com/linghaoSu))
++ [Fix] [axis] Fix last tick doesn't show for single data. [#18469](https://github.com/apache/echarts/issues/18469) ([Ovilia](https://github.com/Ovilia))
++ [Fix] [pie] Fix incorrect response area of pie piece when `selectedOffset` is enabled and `animation` is disabled. [#1011](https://github.com/ecomfe/zrender/pull/1011) ([plainheart](https://github.com/plainheart))
++ [Fix] [custom] Fix user-defined `info` property was not available in the event handler. [#18400](https://github.com/apache/echarts/issues/18400) ([sobolewsk](https://github.com/sobolewsk))
++ [Fix] [legend] Inherit legend rich text color from legend's options. [#18260](https://github.com/apache/echarts/issues/18260) ([ChepteaCatalin](https://github.com/ChepteaCatalin))
++ [Fix] [util] Fix `{yy}` pattern has no zero padding in time format util. [#18535](https://github.com/apache/echarts/issues/18535) ([linghaoSu](https://github.com/linghaoSu))
++ [Fix] [api] Only deprecate `disConnect` but not `disconnect`. [#18758](https://github.com/apache/echarts/issues/18758) ([Justineo](https://github.com/Justineo))
++ [Fix] [i18n] Fix the abbr of "March" for the DE language ("Mar" -> "Mrz"). [#18387](https://github.com/apache/echarts/issues/18387) ([Stebeber](https://github.com/Stebeber))
++ [Fix] [type] Fix wrong type for data item value of the `parallel` series. [#18425](https://github.com/apache/echarts/issues/18425) ([ManishDait](https://github.com/ManishDait))
++ [Fix] [type] Allow passing `null` to the parameters of `init` function. [#18575](https://github.com/apache/echarts/issues/18575) ([zhuscat](https://github.com/zhuscat))
+
+## v5.4.2
+<div class="time">2023-03-23</div>
+
++ [Feature] [bar] Support `borderRadius` for polar bar and its background. [#17995](https://github.com/apache/echarts/issues/17995) ([Ovilia](https://github.com/Ovilia))
++ [Feature] [i18n] Add Turkish(tr_TR) translation. [#18012](https://github.com/apache/echarts/issues/18012) ([partitect](https://github.com/partitect))
++ [Feature] [i18n] Add Vietnamese(vi_VN) translation. [#18279](https://github.com/apache/echarts/issues/18279) ([nghiepdev](https://github.com/nghiepdev))
++ [Fix] [bar] Polar bar animation should start from `r0` rather than `0`. [#17997](https://github.com/apache/echarts/issues/17997) ([Ovilia](https://github.com/Ovilia))
++ [Fix] [marker] Fix abnormal range of `markArea` in bar series. [#18229](https://github.com/apache/echarts/issues/18229) ([Ovilia](https://github.com/Ovilia))
++ [Fix] [line] Fix labels don't show in line series when `ssr` is enabled. [#18032](https://github.com/apache/echarts/issues/18032) ([plainheart](https://github.com/plainheart))
++ [Fix] [svg] Fix defined CSS doesn't work due to unexpected encoding for style tag. [#982](https://github.com/ecomfe/zrender/pull/982) ([plainheart](https://github.com/plainheart))
++ [Fix] [sunburst] Fix labels might upside down in `radial` layout. [#18240](https://github.com/apache/echarts/issues/18240) ([susiwen8](https://github.com/susiwen8))
++ [Fix] [dataset] Fix chart can't render when using object array and object item contains a property named `length`. [#18276](https://github.com/apache/echarts/issues/18276) ([susiwen8](https://github.com/susiwen8))
++ [Fix] [tooltip] Fix tooltip still disappears after leaving the tooltip even if `alwaysShowContent` was enabled. [#18221](https://github.com/apache/echarts/issues/18221) ([jianghaoran116](https://github.com/jianghaoran116))
++ [Fix] [text] Charsets like Cyrillic should break word the same as Latin. [#973](https://github.com/ecomfe/zrender/issues/973) ([Ovilia](https://github.com/Ovilia))
++ [Fix] [type] Add missing `treePathInfo` property into sunburst formatter callback and add missing `data` option into `SunburstSeriesOption`. [#18310](https://github.com/apache/echarts/issues/18310) ([plainheart](https://github.com/plainheart))
++ [Fix] [type] Add missing callback function type for the `symbol` option of tree series. [#18070](https://github.com/apache/echarts/issues/18070) ([ChepteaCatalin](https://github.com/ChepteaCatalin))
+
 ## v5.4.1
 <div class="time">2022-12-09</div>
 
@@ -980,7 +1018,7 @@ Fix the line label can not be returned to its original opacity after `"focusNode
 
 + [Fix] Fix legend is not able to scroll when the space is not enough to contain one item. See [#6743](https://github.com/apache/incubator-echarts/issues/6743), [#8971](https://github.com/apache/incubator-echarts/issues/8971), [#9471](https://github.com/apache/incubator-echarts/issues/9471).
 
-+ [Fix] Fix the centered pie label might has some bias on some angles. See [#9657](https://github.com/apache/incubator-echarts/issues/9657).
++ [Fix] Fix the centered pie label might have offset on some angles. See [#9657](https://github.com/apache/incubator-echarts/issues/9657).
 
 + [Fix] Fix Geo map panning is not working on MS Edge browser See [#9479](https://github.com/apache/incubator-echarts/issues/9479).
 
@@ -1225,7 +1263,7 @@ Fix the problem that bar progressive was blocked.
 <div class="time">2017-11-10</div>
 
 + [^] Fixed backward compatibility problems brounght by `3.8.0`:
-    + In `3.8.0`, the content in `lib` directory is the same as the content in `src` directory (both are ES Module), which may not compatible with the old verisons of node and webpack. So rollback to commonJS format in `lib` of `3.8.2`.
+    + In `3.8.0`, the content in `lib` directory is the same as the content in `src` directory (both are ES Module), which may not compatible with the old versions of node and webpack. So rollback to commonJS format in `lib` of `3.8.2`.
     + In `3.8.0`, the source code in `src` constains global variable `__DEV__` (which prints dev helper info for echarts users). To get the declaration of the global variable, users should include `echarts/src/config.js` manually or make some settings in `webpack`/`rollup` (Check [custom build tutorial](https://ecomfe.github.io/echarts-doc/public/en/option.html#Create%20Custom%20Build%20of%20ECharts) please), which is not backward compatible. So we have removed `__DEV__` from the codes in `echarts/lib/**` in `3.8.2`. If dev helper info is required, use codes in `echarts/src/**`.
     + After `3.8`, `echarts/src/echarts.js` (the same as `echarts/lib/echarts.js` in `3.8.0`) does not include util methods, which used to be mounted on it. Now util methods are listed in `echarts/src/export` and mounted on `echarts/echarts*.js`. But it is not backward compatibility, so we have rollbacked to mount them on `echarts/lib/echarts.js` in `3.8.2`.
     + The way of including `echarts/extension/dataTool`, havs been rollbacked to the original approach before `3.8`, where it must be included explicitly, and the namespace will be mounted on `echarts` namespame.
